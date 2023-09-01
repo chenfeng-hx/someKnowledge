@@ -1,0 +1,77 @@
+<!-- 当前代码编辑信息:
+        由用户 尘封 使用 WebStorm 在 “web面试” 中
+        于 2023-05-06 17:17:42 编写而成！
+        祝你食用愉快！！！ -->
+<!--<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<div style="width: 0; height: 20px; background-color: orangered;"></div>
+	<script>
+		let process = document.getElementsByTagName('div')[0];
+		let timer = setInterval(() => {
+			if (parseInt(process.style.width) >= 100) return clearInterval(timer);
+			console.log(process.style.width);
+			process.style.width = parseInt(process.style.width) +1 + 'px';
+			process.innerText = parseInt(process.style.width) + '%';
+		}, 10);
+	</script>
+</body>
+</html>-->
+
+<!--<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<div style="width: 0; height: 20px; background-color: orangered;"></div>
+<script>
+	let process = document.getElementsByTagName('div')[0];
+	let timer = setTimeout(function fn() {
+		if (parseInt(process.style.width) < 100) {
+			console.log(process.style.width);
+			process.style.width = parseInt(process.style.width) +1 + 'px';
+			process.innerText = parseInt(process.style.width) + '%';
+			timer = setTimeout(fn, 10);
+		} else {
+			return clearTimeout(timer);
+		}
+	}, 10);
+</script>
+</body>
+</html>-->
+
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<div style="width: 0; height: 20px; background-color: orangered;"></div>
+<script>
+	let process = document.getElementsByTagName('div')[0];
+	let timer = requestAnimationFrame(function fn() {
+		if (parseInt(process.style.width) < 100) {
+			console.log(process.style.width);
+			process.style.width = parseInt(process.style.width) +1 + 'px';
+			process.innerText = parseInt(process.style.width) + '%';
+			requestAnimationFrame(fn);
+		} else {
+			cancelAnimationFrame(timer);
+		}
+	});
+</script>
+</body>
+</html>

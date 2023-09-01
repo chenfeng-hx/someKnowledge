@@ -1,0 +1,153 @@
+<!-- 当前代码编辑信息:
+        由用户 尘封 使用 WebStorm 在 “web面试” 中
+        于 2023-05-04 14:36:42 编写而成！
+        祝你食用愉快！！！ -->
+<!--<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>高度塌陷问题.html</title>
+		<style>
+			ul {
+				position: absolute;
+			}
+			ul li {
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		&lt;!&ndash; 注释 &ndash;&gt;
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</body>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>高度塌陷问题.html</title>
+	<style>
+		ul {
+			overflow: hidden;
+		}
+		ul li {
+			float: left;
+		}
+	</style>
+</head>
+<body>
+&lt;!&ndash; 注释 &ndash;&gt;
+<ul>
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+</body>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>高度塌陷问题.html</title>
+	<style>
+		.clearfix:after {
+			content: " ";
+			display: block;
+			clear: both;
+			height: 0;
+		}
+		ul li {
+			float: left;
+		}
+	</style>
+</head>
+<body>
+&lt;!&ndash; 注释 &ndash;&gt;
+<ul>
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+	<div class="clearfix"></div>
+</ul>
+</body>
+</html>-->
+
+<!--
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>高度塌陷问题.html</title>
+	<style>
+		ul {
+			height: 20px;
+		}
+		ul li {
+			float: left;
+		}
+	</style>
+</head>
+<body>
+&lt;!&ndash; 注释 &ndash;&gt;
+<ul>
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+</body>
+</html>
+-->
+
+<!--<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>高度塌陷问题.html</title>
+	<style>
+		ul {
+			display: inline-block;
+		}
+		ul li {
+			float: left;
+		}
+	</style>
+</head>
+<body>
+&lt;!&ndash; 注释 &ndash;&gt;
+<ul>
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>高度塌陷问题.html</title>
+	<style>
+		ul {
+			overflow: auto;
+		}
+		ul li {
+			float: left;
+		}
+	</style>
+</head>
+<body>
+<!-- 注释 -->
+<ul>
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+</body>
+</html>

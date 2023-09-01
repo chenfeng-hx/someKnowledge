@@ -1,0 +1,89 @@
+/**
+ * 当前代码编辑信息:
+ *    由用户 尘封 使用 WebStorm 在 “web面试” 中
+ *    于 2023-05-07 17:05:26 编写而成！
+ *    祝你食用愉快！！！
+ */
+
+<!--
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var a = 1;
+		(function fn() {
+			console.log(this.a);
+		})();
+	</script>
+</body>
+</html>
+-->
+
+<!--
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var a = 1;
+	var obj = {
+		a:2,
+		fn:function(){
+			console.log(this.a)
+		}
+	}
+	obj.fn() //输出2
+</script>
+</body>
+</html>-->
+
+<!--
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function createP(name,age){
+		this.name = name //this.name指向P
+		this.age = age //this.age指向P
+	}
+	let p = new createP("老李",46)
+	console.log(p);
+</script>
+</body>
+</html>-->
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function add(c,d){
+		return this.a + this.b + c + d
+	}
+	var o = {a:1, b:2};
+	console.log(add.call(o, 5, 7)); //输出15
+</script>
+</body>
+</html>

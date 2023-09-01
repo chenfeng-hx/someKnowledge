@@ -1,0 +1,40 @@
+<!-- 当前代码编辑信息:
+        由用户 尘封 使用 WebStorm 在 “web面试” 中
+        于 2023-05-06 11:29:27 编写而成！
+        祝你食用愉快！！！ -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>按钮获取焦点键盘事件.html</title>
+</head>
+<body>
+	<!-- 注释 -->
+	<div>
+		<input id="name" placeholder="name:">
+		<input id="password" placeholder="password:">
+		<button type="button">click</button>
+	</div>
+	<script>
+		window.onload = function () {
+			let name = document.getElementById('name');
+			let password = document.getElementById('password');
+			let btn = document.getElementsByTagName('button')[0];
+			console.log(btn);
+			password.focus();
+			password.onkeydown = function (e) {
+				if (e.key === 'Enter') {
+					this.blur();
+					btn.focus();
+				}
+			}
+			btn.onkeydown = function (e) {
+				console.log(e);
+				if (e.key === 'Enter') {
+					console.log('submit!');
+				}
+			}
+		}
+	</script>
+</body>
+</html>
